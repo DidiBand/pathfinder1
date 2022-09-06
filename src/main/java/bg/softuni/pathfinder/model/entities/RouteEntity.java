@@ -12,9 +12,11 @@ import java.util.Set;
 @Table(name = "routes")
 public class RouteEntity extends BaseEntity{
 
+    @Lob
     @Column(columnDefinition = "text")
     private String description;
 
+    @Lob
     @Column(columnDefinition = "longtext")
     private String gpxCoordinates;
 
@@ -41,6 +43,9 @@ public class RouteEntity extends BaseEntity{
 
     @OneToMany(mappedBy = "route", targetEntity = PictureEntity.class, fetch = FetchType.EAGER)
     private Set<PictureEntity> pictures;
+
+    @OneToMany(mappedBy = "route", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<CommentEntity> comments;
 
     public RouteEntity() {
     }
@@ -107,5 +112,13 @@ public class RouteEntity extends BaseEntity{
 
     public void setPictures(Set<PictureEntity> pictures) {
         this.pictures = pictures;
+    }
+
+    public List<CommentEntity> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<CommentEntity> comments) {
+        this.comments = comments;
     }
 }

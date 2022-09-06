@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface PictureRepository extends JpaRepository<PictureEntity, Long> {
 
-    @Query("SELECT p.url FROM PictureEntity AS p")
+    @Query("SELECT p.url FROM PictureEntity p")
     List<String> findAllUrls();
 }

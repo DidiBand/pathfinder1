@@ -12,6 +12,7 @@ public class CategoryEntity extends BaseEntity{
     @Column(nullable = false, unique = true)
     private CategoryEnum name;
 
+    @Lob
     @Column(columnDefinition = "text")
     private String description;
 

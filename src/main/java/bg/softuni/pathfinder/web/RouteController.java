@@ -1,6 +1,6 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.bind.RouteAddBindingModel;
+import bg.softuni.pathfinder.model.binding.RouteAddBindingModel;
 import bg.softuni.pathfinder.model.enums.CategoryEnum;
 import bg.softuni.pathfinder.model.service.RouteServiceModel;
 import bg.softuni.pathfinder.model.view.PictureView;
@@ -58,7 +58,7 @@ public class RouteController {
         RouteServiceModel routeServiceModel = this.routeService.findById(id);
 
         RouteExtendedView routeView = this.modelMapper.map(routeServiceModel, RouteExtendedView.class);
-        routeView.setAuthorName(routeServiceModel.getAuthor().getFullname());
+        routeView.setAuthorName(routeServiceModel.getAuthor().getFullName());
 
         model.addAttribute("routeView", routeView);
 

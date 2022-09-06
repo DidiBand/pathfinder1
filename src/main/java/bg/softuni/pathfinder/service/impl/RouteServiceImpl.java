@@ -1,11 +1,10 @@
 package bg.softuni.pathfinder.service.impl;
 
-import bg.softuni.pathfinder.model.bind.RouteAddBindingModel;
+import bg.softuni.pathfinder.model.binding.RouteAddBindingModel;
 import bg.softuni.pathfinder.model.entities.CategoryEntity;
 import bg.softuni.pathfinder.model.entities.RouteEntity;
 import bg.softuni.pathfinder.model.entities.UserEntity;
 import bg.softuni.pathfinder.model.enums.CategoryEnum;
-import bg.softuni.pathfinder.model.service.CategoryServiceModel;
 import bg.softuni.pathfinder.model.service.RouteServiceModel;
 import bg.softuni.pathfinder.model.service.UserServiceModel;
 import bg.softuni.pathfinder.repository.RouteRepository;
@@ -19,7 +18,6 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

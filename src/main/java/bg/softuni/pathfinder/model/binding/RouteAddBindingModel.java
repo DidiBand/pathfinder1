@@ -1,6 +1,5 @@
-package bg.softuni.pathfinder.model.bind;
+package bg.softuni.pathfinder.model.binding;
 
-import bg.softuni.pathfinder.model.entities.CategoryEntity;
 import bg.softuni.pathfinder.model.enums.CategoryEnum;
 import bg.softuni.pathfinder.model.enums.LevelEnum;
 import org.springframework.web.multipart.MultipartFile;

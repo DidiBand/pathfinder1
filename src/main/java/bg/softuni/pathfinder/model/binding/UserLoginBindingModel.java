@@ -1,4 +1,4 @@
-package bg.softuni.pathfinder.model.bind;
+package bg.softuni.pathfinder.model.binding;
 
 import javax.validation.constraints.Size;
 

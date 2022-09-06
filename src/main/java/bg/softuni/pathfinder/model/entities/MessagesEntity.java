@@ -2,6 +2,7 @@ package bg.softuni.pathfinder.model.entities;
 
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
@@ -10,6 +11,7 @@ public class MessagesEntity extends BaseEntity{
     @Column(nullable = false, name = "date_time")
     private LocalDateTime dateTime;
 
+    @Lob
     @Column(name = "text_content", columnDefinition = "text")
     private String textContent;
 

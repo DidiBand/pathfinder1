@@ -1,10 +1,8 @@
 package bg.softuni.pathfinder.web;
 
-import bg.softuni.pathfinder.model.bind.UserLoginBindingModel;
-import bg.softuni.pathfinder.model.bind.UserRegisterBindingModel;
-import bg.softuni.pathfinder.model.entities.RoleEntity;
+import bg.softuni.pathfinder.model.binding.UserLoginBindingModel;
+import bg.softuni.pathfinder.model.binding.UserRegisterBindingModel;
 import bg.softuni.pathfinder.model.enums.LevelEnum;
-import bg.softuni.pathfinder.model.enums.RoleEnum;
 import bg.softuni.pathfinder.model.service.UserServiceModel;
 import bg.softuni.pathfinder.model.view.UserProfileViewModel;
 import bg.softuni.pathfinder.service.UserService;
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 @RequestMapping("/users")

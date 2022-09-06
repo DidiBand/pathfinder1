@@ -58,11 +58,11 @@ public class UserEntity extends BaseEntity{
         this.email = email;
     }
 
-    public String getFullname() {
+    public String getFullName() {
         return fullName;
     }
 
-    public void setFullname(String fullname) {
+    public void setFullName(String fullname) {
         this.fullName = fullname;
     }
 

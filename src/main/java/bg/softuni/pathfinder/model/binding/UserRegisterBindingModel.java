@@ -1,6 +1,4 @@
-package bg.softuni.pathfinder.model.bind;
-
-import org.springframework.stereotype.Component;
+package bg.softuni.pathfinder.model.binding;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;

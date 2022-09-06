@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:fragment="myHead">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pathfinder</title>
@@ -19,7 +23,7 @@
 <body>
 <nav class="main-nav" th:fragment="myNavigation">
     <ul>
-        <th:block th:if="${@currentUser.id == null}">
+        <th:block sec:authorize="!isAuthenticated()">
             <li>
                 <a href="/">Home</a>
             </li>
@@ -34,7 +38,7 @@
             </li>
             </th:block>
 
-            <th:block th:unless="${@currentUser.id == null}">
+            <th:block sec:authorize="isAuthenticated()">
                 <li>
                     <a href="/routes/add">Add new route</a>
                 </li>
